@@ -1,7 +1,12 @@
+import Hero from "@/components/section/Hero";
+
 function Main() {
   return (
     <main>
-      <div></div>
+      {/* Hero Section */}
+      <div>
+        <Hero />
+      </div>
     </main>
   );
 }

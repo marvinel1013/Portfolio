@@ -29,10 +29,10 @@ function MobileMenuSection() {
             </li>
           ))}
         </ul>
-        <h1 className="font-semibold mt-8 text-lg">
+        <h1 className="font-semibold mt-8 text-lg text-center">
           <Text>LET'S CONNECT</Text>
         </h1>
-        <ul className="mt-5 flex gap-3 items-center">
+        <ul className="mt-5 flex justify-center gap-3 items-center">
           {icons.map((icon, index) => (
             <li
               className="shadow-md shadow-primary even:shadow-secondary p-2 rounded-full text-2xl"
