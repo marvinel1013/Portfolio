@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { NavLinks } from "@/config/config";
 import Image from "next/image";
 import MyLogo from "../../assets/images/MyLogo.png";
@@ -11,13 +11,32 @@ function NavBar() {
   //mobile menu STATE
   const [openMobileMenu, setOpenMobileMenu] = useState<boolean>(false);
 
+  //NavBar Shadow STATE
+  const [navShadow, setNavShadow] = useState<boolean>(false);
+
   //toggle openMobileMenu Function
   const handleOpenMobileMenu = () => {
     setOpenMobileMenu((prevState) => !prevState);
   };
 
+  useEffect(() => {
+    const shadow = () => {
+      if (window.scrollY >= 90) {
+        setNavShadow(true);
+      } else {
+        setNavShadow(false);
+      }
+    };
+
+    window.addEventListener("scroll", shadow);
+  }, [navShadow]);
+
   return (
-    <div className="fixed z-20 h-16 md:h-24 w-full text-light bg-dark px-5 md:px-10 shadow-md shadow-primary">
+    <div
+      className={`fixed z-20 h-16 md:h-24 w-full text-light bg-dark px-5 md:px-10 ${
+        navShadow ? "shadow-md shadow-primary" : " "
+      }  `}
+    >
       <div className="w-full h-full flex items-center justify-between">
         <Image
           src={MyLogo}

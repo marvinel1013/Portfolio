@@ -46,7 +46,7 @@ function Hero() {
             <ul className="flex items-center justify-center gap-5 md:gap-10 w-full">
               {icons.map((icon, index) => (
                 <li
-                  className="shadow-lg shadow-primary even:shadow-secondary p-3  md:p-5 rounded-full text-2xl animate-bounce"
+                  className="shadow-md shadow-primary even:shadow-secondary p-3  md:p-5 rounded-full text-2xl animate-bounce cursor-pointer"
                   key={index}
                 >
                   {icon}

@@ -1,3 +1,4 @@
+import About from "@/components/section/About";
 import Hero from "@/components/section/Hero";
 
 function Main() {
@@ -6,6 +7,7 @@ function Main() {
       {/* Hero Section */}
       <div>
         <Hero />
+        <About />
       </div>
     </main>
   );
