@@ -1,5 +1,6 @@
 import About from "@/components/section/About";
 import Hero from "@/components/section/Hero";
+import Skills from "@/components/section/Skills";
 
 function Main() {
   return (
@@ -8,6 +9,7 @@ function Main() {
       <div>
         <Hero />
         <About />
+        <Skills />
       </div>
     </main>
   );

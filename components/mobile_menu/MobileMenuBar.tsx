@@ -1,12 +1,16 @@
-import Image from "next/image";
-import MyLogo from "../../assets/images/MyLogo.png";
 import { MdClose } from "react-icons/md";
 import MobileMenuSection from "./MobileMenuSection";
+import { Great_Vibes } from "next/font/google";
 
 type Props = {
   openMobileMenu: boolean;
   handleOpenMobileMenu: any;
 };
+
+const SignatureFont = Great_Vibes({
+  subsets: ["latin"],
+  weight: ["400"],
+});
 
 function MobileMenuBar({ openMobileMenu, handleOpenMobileMenu }: Props) {
   return (
@@ -25,13 +29,11 @@ function MobileMenuBar({ openMobileMenu, handleOpenMobileMenu }: Props) {
         }
       >
         <div className="flex items-center justify-between">
-          <Image
-            onClick={handleOpenMobileMenu}
-            src={MyLogo}
-            alt="my-logo"
-            width={45}
-            className="shadow-lg shadow-primary rounded-md animate-pulse"
-          />
+          <div className={SignatureFont.className}>
+            <h1 className="text-3xl mt-2 tracking-wide bg-gradient-to-r from-secondary to-primary p-2 text-transparent bg-clip-text">
+              Marvinel
+            </h1>
+          </div>
           <div
             onClick={handleOpenMobileMenu}
             className=" shadow-md shadow-secondary p-1 rounded-full"

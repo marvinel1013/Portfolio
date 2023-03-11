@@ -6,6 +6,12 @@ import Image from "next/image";
 import MyLogo from "../../assets/images/MyLogo.png";
 import { HiOutlineMenuAlt1 } from "react-icons/hi";
 import MobileMenuBar from "../mobile_menu/MobileMenuBar";
+import { Great_Vibes } from "next/font/google";
+
+const SignatureFont = Great_Vibes({
+  subsets: ["latin"],
+  weight: ["400"],
+});
 
 function NavBar() {
   //mobile menu STATE
@@ -38,12 +44,23 @@ function NavBar() {
       }  `}
     >
       <div className="w-full h-full flex items-center justify-between">
-        <Image
-          src={MyLogo}
-          alt="my-logo"
-          className="w-12 md:w-16 shadow-lg shadow-primary rounded-md animate-pulse"
-          priority
-        />
+        <div className="flex items-center w-full gap-2">
+          <Image
+            src={MyLogo}
+            alt="my-logo"
+            className="w-12 md:w-16 shadow-lg shadow-primary cursor-pointer rounded-md animate-pulse"
+            priority
+          />
+          <div
+            className={
+              SignatureFont.className +
+              " " +
+              "text-5xl lg:flex hidden mt-3 bg-gradient-to-r from-secondary to-primary p-2 text-transparent bg-clip-text"
+            }
+          >
+            Marvinel
+          </div>
+        </div>
         <ul className="hidden md:flex gap-5">
           {NavLinks.map((link, index) => (
             <li

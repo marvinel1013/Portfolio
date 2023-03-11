@@ -52,7 +52,7 @@ function About() {
           <Image
             src={AboutImage}
             alt="about-image"
-            className="md:w-[300px] w-[300px] rounded-lg cursor-pointer p-3 shadow-lg shadow-primary animate-pulse lg:mt-0 mt-16"
+            className="md:w-[300px] w-[300px] hover:skew-y-12 duration-500 rounded-lg cursor-pointer p-3 shadow-lg shadow-primary lg:mt-0 mt-16"
           />
         </div>
       </div>
