@@ -43,7 +43,7 @@ function SkillsTechCards() {
     {
       logo: nextjs,
       title: "Next JS",
-      shadowColor: "shadow-gray-700",
+      shadowColor: "shadow-gray-500",
     },
     {
       logo: typescript,
@@ -93,7 +93,9 @@ function SkillsTechCards() {
               data.shadowColor
             }
           />
-          <span className="md:text-base text-sm">{data.title}</span>
+          <span className="md:text-base text-sm md:font-semibold font-normal">
+            {data.title}
+          </span>
         </div>
       ))}
     </div>

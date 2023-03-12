@@ -1,17 +1,15 @@
 import Text from "../reusable_components/Text";
-import { techData } from "@/config/config";
-import Image from "next/image";
 import SkillsTechCards from "../cards/SkillsTechCards";
 
 function Skills() {
   return (
-    <div className="text-light min-h-screen w-full pb-10 mt-20 md:mt-32">
+    <div className="text-light min-h-screen w-full pb-10 mt-28 md:mt-32">
       <div className="w-full h-full max-w-6xl mx-auto flex justify-center flex-col px-7 lg:px-0">
         <h1 className="text-2xl md:text-4xl font-extrabold tracking-wide mb-5 text-center md:text-start">
           <Text>SKILLS</Text>
         </h1>
         <div>
-          <h2 className="mb-4 md:mb-5 tracking-wide md:text-xl font-extralight md:text-start text-center">
+          <h2 className=" md:mb-5 tracking-wide md:text-xl font-extralight md:text-start text-center">
             These are the Technologies I've worked with
           </h2>
 
